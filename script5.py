@@ -2,11 +2,9 @@ import psutil
 import requests
 from tabulate import tabulate
 
-# API Keys
-VIRUS_TOTAL_API_KEY = "c6c552acc6229e150cfe80210e50e09fbd38fb2770413c1d60fe54706f76697f"
-SHODAN_API_KEY = "19AJ1uYBVjx3Kl7zP9e0AQ28ExFCsuiY"
+VIRUS_TOTAL_API_KEY = ""
+SHODAN_API_KEY = ""
 
-# VirusTotal API function
 def fetch_virustotal_score(ip):
     url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip}"
     headers = {"x-apikey": VIRUS_TOTAL_API_KEY}
@@ -16,7 +14,6 @@ def fetch_virustotal_score(ip):
         return data.get("data", {}).get("attributes", {}).get("last_analysis_stats", {}).get("malicious", "N/A")
     return "N/A"
 
-# Shodan API function
 def fetch_shodan_score(ip):
     url = f"https://api.shodan.io/shodan/host/{ip}?key={SHODAN_API_KEY}"
     response = requests.get(url)
@@ -25,7 +22,6 @@ def fetch_shodan_score(ip):
         return data.get("vulns", [])
     return "N/A"
 
-# List established connections, filter out loopback, and fetch VirusTotal & Shodan scores
 def list_established_connections():
     connections = []
     sl_no = 1
@@ -57,7 +53,6 @@ def list_established_connections():
             sl_no += 1
     return connections
 
-# Save to text file in table format
 def save_to_text_file(connections, filename="established_connections.txt"):
     headers = ["SL No.", "PID", "File Path", "Local Port", "Remote Port", "Remote Address", "VirusTotal Score", "Shodan Score"]
     with open(filename, 'w') as file:
