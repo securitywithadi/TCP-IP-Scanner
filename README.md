@@ -17,7 +17,7 @@ Python >= 3.11.9 must be installed.
 
 ![image](https://github.com/user-attachments/assets/87cb9dfb-9782-4647-85dd-4c7409c44ee0)
 
-3. Install Required Libraries
+2. Install Required Libraries
 Use pip to install the required dependencies:
 pip install psutil requests
 
