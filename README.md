@@ -14,9 +14,10 @@ The script execution time typically ranges between 50 seconds to 180 seconds, de
 Before running the script, ensure the following requirements are met:
 1. Python Version
 Python >= 3.11.9 must be installed.
+
 ![image](https://github.com/user-attachments/assets/87cb9dfb-9782-4647-85dd-4c7409c44ee0)
 
-2. Install Required Libraries
+3. Install Required Libraries
 Use pip to install the required dependencies:
 pip install psutil requests
 
@@ -35,6 +36,8 @@ python3 tcp-ip_info_gathering.py
 
 **Output**
 Note: Open the Text File in WordWrap Mode for better readability.
+
 ![image](https://github.com/user-attachments/assets/d45c54c5-4a17-4392-abce-74372e375125)
+
 ![image](https://github.com/user-attachments/assets/080f93a0-43c9-46c2-aa65-cc4396152f76)
 
