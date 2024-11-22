@@ -3,8 +3,8 @@ import requests
 from tabulate import tabulate
 
 # API Keys
-VIRUS_TOTAL_API_KEY = "c6c552acc6229e150cfe80210e50e09fbd38fb2770413c1d60fe54706f76697f"
-SHODAN_API_KEY = "19AJ1uYBVjx3Kl7zP9e0AQ28ExFCsuiY"
+VIRUS_TOTAL_API_KEY = " *** "
+SHODAN_API_KEY = " *** "
 
 # VirusTotal API function
 def fetch_virustotal_score(ip):
