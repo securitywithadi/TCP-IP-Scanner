@@ -2,8 +2,8 @@ import psutil
 import requests
 from tabulate import tabulate
 
-VIRUS_TOTAL_API_KEY = ""
-SHODAN_API_KEY = ""
+VIRUS_TOTAL_API_KEY = " *** "
+SHODAN_API_KEY = " *** "
 
 def fetch_virustotal_score(ip):
     url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip}"
